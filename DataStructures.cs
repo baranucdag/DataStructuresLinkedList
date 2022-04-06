@@ -56,7 +56,30 @@ namespace Deneme
             {
                 head = null;
             }
+            //Sona Node ekleme
+            public void AddNodeLast(Ders ders)
+            {
 
+                NodeSingle newNode = new NodeSingle();
+
+                newNode.data = ders;
+
+                newNode.next = null;
+
+                if (head == null)
+                {
+                    head = newNode;
+                }
+                else
+                {
+                    NodeSingle temp = new NodeSingle();
+                    temp = head;
+                    while (temp.next != null)
+                        temp = temp.next;
+                    temp.next = newNode;
+                }
+            }
+            
             //başa node ekleme
             public void AddNodeFirst(Program.Ders ders)
             {
